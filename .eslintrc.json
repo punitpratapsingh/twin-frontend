@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "indent": [
+      2,
+      "tab",
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 2
+      }
+    ],
+    "prettier/prettier": ["error"],
+    "no-tabs": 0
+  }
+}

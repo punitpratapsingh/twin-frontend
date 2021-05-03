@@ -1,0 +1,527 @@
+// importing the default font for application
+$font_family: "Montserrat";
+$logo_font_family: "Montserrat";
+@import url("https://fonts.googleapis.com/css?family=#{$font_family}");
+@import url("https://fonts.googleapis.com/css?family=#{$logo_font_family}");
+
+// $theme_color_1: #3e84c0;
+// $theme_color_1: #5a663b;
+// $theme_color_2: #6a8036;
+// $theme_color_3: #6d7d45;
+$theme_color_1: #000060;
+$theme_color_2: #000060;
+$theme_color_3: #000060;
+$theme_color_4: #ffffff;
+$theme_color_5: #f9f9f9;
+
+$theme_color: rgb(121, 177, 222);
+$theme_background: linear-gradient(
+  90deg,
+  $theme_color_2 0%,
+  $theme_color_3 35%,
+  $theme_color_4 100%
+);
+
+// $theme_background: linear-gradient(30deg, #EE5A3B 0%, #F8AF30 100%); /* w3c */
+// $theme_background:linear-gradient(30deg, #72c7ed 10%, #8390c6 100%); /* w3c */
+$theme_background: #f98036;
+
+// global transition factor
+$global_transition: all 0.2s ease-in-out;
+$global_margin: 0px;
+$global_padding: 0px;
+$global_header_gradient: $theme_background;
+$global_box_shadow: 0px 0px 10px 1px silver;
+$global_box_shadow_1: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+$global_font: $font_family;
+$heading_font: $font_family;
+$logo_font: $logo_font_family;
+
+$global_component_margin: 20px;
+$global_border_radius: 5px;
+$global_container_padding: 10px;
+$global_black_color: #383838;
+$global_white_color: #fff;
+$global_grey_one: #868686;
+
+.input-field {
+  padding: 5px;
+  border: none;
+  width: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: solid 1px silver;
+}
+.input-field:focus {
+  outline: none;
+}
+.app-textarea {
+  resize: none;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  min-width: 500px;
+  border: solid 1px silver;
+  min-height: 300px;
+}
+
+.content-center {
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border: 3px solid #e8e8e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, $theme_color_1, $theme_color_1);
+  border-radius: 3px;
+}
+
+//////////////////////////////////
+///////////////// TABLE ////////////
+////////////////////////////////////
+
+.table-container {
+  position: relative;
+}
+
+.table-subContainer {
+  overflow: auto;
+  height: 68vh;
+  max-width: 98vw;
+}
+
+.table {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+@media only screen and (max-width: 1366px) {
+  .table {
+    min-width: 1000px;
+  }
+
+  .table-subContainer {
+    max-width: 74vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .table {
+    min-width: 1100px;
+  }
+
+  .table-subContainer {
+    max-width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .table {
+    min-width: 1100px;
+  }
+
+  .table-subContainer {
+    max-width: 60vw;
+  }
+}
+
+th {
+  text-align: left !important;
+}
+
+.table-head {
+  border: 1px solid #dee2e6 !important;
+}
+
+.table-body {
+  font-size: 13px !important;
+}
+
+.Tablebody-font {
+  font-size: 15px !important;
+}
+
+.head-tr {
+  height: 70px;
+}
+
+.head-tr > th {
+  vertical-align: middle !important;
+}
+
+.body-tr {
+  height: 70px;
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.body-tr > td {
+  vertical-align: middle !important;
+}
+
+.verify-button {
+  background-color: $theme_color_1 !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  width: 130px !important;
+  height: 35px !important;
+  border-radius: 5px !important;
+}
+
+.verify-button:hover {
+  filter: brightness(1.7) !important;
+}
+
+.verify-button:focus {
+  outline: none;
+}
+
+.status-button {
+  color: #a3a3a3 !important;
+  background-color: #ffffff !important;
+  font-size: 13px !important;
+  width: 130px !important;
+  height: 35px !important;
+  border: 2px solid #a3a3a3 !important;
+  border-radius: 5px !important;
+}
+
+.status-button:focus {
+  outline: none;
+}
+
+.status-button-block {
+  background: #a3a3a3 !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  width: 130px !important;
+  height: 35px !important;
+  border: 2px solid #a3a3a3 !important;
+  border-radius: 5px !important;
+}
+
+.status-button-block:focus {
+  outline: none;
+}
+
+.delete-button {
+  background: $global_white_color !important;
+  border: 2px solid #efefef !important;
+  font-size: 13px !important;
+  padding: 8px 8px !important;
+  border-radius: 5px !important;
+  color: $theme_color_1 !important;
+}
+
+.delete-button:hover {
+  background-color: $theme_color_1 !important;
+  color: #ffffff !important;
+  border: 2px solid $theme_color_1 !important;
+}
+
+.remove-button {
+  background-color: $theme_color_1 !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  padding: 8px 8px !important;
+  border-radius: 5px !important;
+}
+
+.remove-button:focus {
+  outline: none;
+}
+
+.removed-button {
+  background-color: #a3a3a3 !important;
+  color: #ffffff !important;
+  font-size: 8px !important;
+  padding: 8px 8px !important;
+  border-radius: 5px !important;
+}
+
+.remove-button:hover {
+  filter: brightness(1.7) !important;
+}
+
+.remove-button-modify {
+  width: 130px !important;
+  height: 35px !important;
+}
+
+.remove-button-width {
+  width: 100px !important;
+}
+
+.block-button {
+  background: #9b9b9b !important;
+  width: 100px !important;
+  padding: 8px 8px !important;
+  border-radius: 5px !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+}
+
+.block-button:hover {
+  filter: brightness(110%) !important;
+}
+
+.na-button {
+  background: $global_white_color !important;
+  width: 100px !important;
+  padding: 8px 8px !important;
+  border-radius: 5px !important;
+  font-size: 13px !important;
+  color: $theme_color_1 !important;
+  border: 2px solid #efefef !important;
+}
+
+.custom-td {
+  width: 130px !important;
+}
+
+.custom-td-remove {
+  width: 50px;
+}
+
+.name-td {
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.name-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.name-circle > img {
+  width: 100%;
+  height: 100%;
+}
+
+.mentorId-image {
+  width: 70px;
+  height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.mentorId-image > img {
+  width: 100%;
+  height: 100%;
+}
+
+***************************************************
+  ***********************CONTENT*********************
+  ***************************************************
+  .content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.content {
+  margin: 35px;
+  margin-bottom: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-heading {
+  font-size: 24px;
+}
+
+.content-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-top-left {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination-view {
+  font-size: large;
+}
+
+.pagination-view > span {
+  color: #989898;
+}
+
+.pagination-button {
+  display: flex;
+}
+
+.pagination-button-icon {
+  border: 2px solid #f9f9f9 !important;
+  margin-right: 5px !important;
+  border-radius: 5px !important;
+}
+
+.pagination-button-icon:focus {
+  outline: none;
+}
+
+.content-bottom {
+  flex: 1;
+  margin-top: 30px;
+}
+
+.content-middle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-container {
+  margin-right: 35px;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 6px;
+  width: 280px;
+  height: 45px;
+}
+
+.datePicker-container {
+  position: relative;
+  margin-right: 20px;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 6px;
+  width: 140px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  width: 100px !important;
+  border: none;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  background-color: $theme_color_1 !important;
+  color: #ffffff !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+  background-color: $theme_color_1 !important;
+  color: #ffffff !important;
+}
+
+.react-datepicker__input-container input:focus {
+  outline: none;
+}
+
+.react-datepicker__close-icon::after {
+  background-color: $theme_color_1 !important;
+}
+
+.date-line {
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+}
+
+.settings-save-btn {
+  width: 150px !important;
+  height: 45px !important;
+  background: $theme_color_1;
+  color: $global_white_color;
+  font-size: 18px;
+  transition: $global_transition;
+  border-radius: 5px;
+}
+
+.settings-save-btn:hover {
+  filter: brightness(1.7) !important;
+}
+
+.modify-save-btn {
+  width: 200px !important;
+  height: 45px !important;
+  background: $theme_color_1;
+  color: $global_white_color;
+  font-size: 18px;
+  transition: $global_transition;
+  border-radius: 5px;
+}
+
+.modify-save-btn:hover {
+  filter: brightness(1.7) !important;
+}
+
+*************************************************
+  *********************IMAGE-MODAL*****************
+  *************************************************
+  .img-modal-user {
+  height: 400px !important;
+  width: 600px !important;
+}
+
+.img-modal-div-user {
+  height: 400px;
+  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  margin-top: 50vh;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-main-user {
+  position: fixed;
+  background: #383838ee;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+
+.modal-cross-user {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

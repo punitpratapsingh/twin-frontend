@@ -1,0 +1,53 @@
+@import "../../styles/globals";
+
+.main-div {
+
+}
+
+.center-div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bolder;
+  font-size: 40px;
+  height: auto;
+  width: 400px;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+
+.name-div {
+  height: auto;
+  width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  width: auto;
+  background-color: yellowgreen;
+  font-size: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: yellow;
+}
+
+.infoText {
+  font-size: 12px;
+}
+
+.inpt {
+  width: 100%;
+  height: 16px;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+}
